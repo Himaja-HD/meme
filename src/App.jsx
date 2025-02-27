@@ -10,6 +10,8 @@ import MemeUpload from "./pages/MemeUpload"; // Upload
 import MemeDetails from "./pages/MemeDetails"; // Details
 import UserProfile from "./pages/UserProfile"; // Profile
 import Leaderboard from "./pages/Leaderboard"; // Ranking
+import UploadMeme from "./pages/MemeUpload";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false); // Theme
@@ -26,6 +28,9 @@ const App = () => {
             <Route path="/meme/:id" element={<MemeDetails darkMode={darkMode} />} /> {/* Details */}
             <Route path="/profile" element={<UserProfile darkMode={darkMode} />} /> {/* Profile */}
             <Route path="/leaderboard" element={<Leaderboard darkMode={darkMode} />} /> {/* Ranking */}
+            <Route path="/upload" element={<UploadMeme />} />
+            <Route path="*" element={<NotFound/>} />
+          
           </Routes>
           <Footer darkMode={darkMode} /> {/* Footer */}
         </div>
